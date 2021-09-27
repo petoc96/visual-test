@@ -14,25 +14,24 @@
 
       </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <div class="container overflow-hidden" style="padding-top: 40vh; padding-bottom: 40vh;">
+            <div class="row gy-5">
+                <div class="col-4 left">
                     <div id="left" class="circle"></div>
                 </div>
                 <div class="col align-middle">
                     <button type="button" class="btn btn-dark btn-lg" onclick="startGame()">Start</button>
+                    <button type="button" class="btn btn-light btn-lg" onclick="stopGame()">Stop</button>
                 </div>
-                <div class="col">
+                <div class="col-4 right">
                     <div id="right" class="circle"></div>
                 </div>
+                <div class="col-12 right">
+                    <div class="mb-3">
+                        <textarea class="form-control" id="textArea" rows="3"></textarea>
+                    </div>
+                </div>
               </div>
-            <div class="row sticky-bottom">
-                  <div class="mb-3">
-                    <label for="textArea" class="form-label">Text area</label>
-                    <textarea class="form-control" id="textArea" rows="3"></textarea>
-                  </div>
-            </div>
-
         </div>
     </body>
 </html>

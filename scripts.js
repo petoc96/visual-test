@@ -1,25 +1,28 @@
-// $(function() {
-//   for (let i = 0; i < 10; i++) {
-//     setInterval(function() {
-//       $("#left").hide(); 
-//       $("#right").show(); 
-//       setTimeout(function() {
-//         $("#left").show();
-//         $("#right").hide(); 
-//       },500);
-//     },1000); 
-//   }
-// })
+let nIntervId;
+let nSeconds = 0;
+const LIMIT = 31;
 
 function displayTime() {
+  nSeconds += 1;
   $("#left").hide();
   $("#right").show();
   setTimeout(function() {
     $("#left").show();
     $("#right").hide();
   }, 500);
+  if (nSeconds == LIMIT) {
+    stopGame();
+  }
 }
-// $("#right2").hide();
+
 function startGame() {
-  setInterval(displayTime, 1000);
+  if (!nIntervId) {
+    nIntervId = setInterval(displayTime, 1000);
+  }
+}
+
+function stopGame() {
+  clearInterval(nIntervId);
+  nIntervId = null;
+  nSeconds = 0;
 }
