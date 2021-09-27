@@ -1,13 +1,11 @@
 let nIntervId;
 let nSeconds = 0;
 const LIMIT = 31;
-const COLORS = ["blue", "red", "yellow", "green", "black"];
+const COLORS = ["blue", "red", "orange", "green", "black", "purple"];
 
 function displayTime() {
   nSeconds += 1;
   $("#left").hide();
-  let color = getRandomColor();
-  console.log(color);
   $("#right").css("background-color", getRandomColor());
   $("#right").show();
   setTimeout(function() {
