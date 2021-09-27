@@ -1,0 +1,32 @@
+.header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.container {
+    min-height: 100vh;
+    align-content: center;
+    /* display: grid; */
+    /* grid-template-columns: 220px auto 220px; */
+    /* grid-template-rows: 25% 25% 25%; */
+}
+
+.col {
+    /* background-color: orange; */
+    text-align: -moz-center;
+    align-self: center;
+}
+
+.circle {
+    display: flex;
+    width: 220px;
+    height: 220px;
+    background-color: green;
+    border-radius: 50%;
+}
